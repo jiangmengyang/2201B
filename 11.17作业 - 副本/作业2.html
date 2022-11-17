@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div {
+        width: 50px;
+        height: 30px;
+        border: 1px solid aqua;
+        background-color: brown;
+        float: left;
+        margin-right: 10px;
+    }
+</style>
+
+<body>
+    <h2>点击切换颜色</h2>
+    <hr />
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+</body>
+
+<script>
+    // let的实践案例
+    // let divList = document.getElementsByClassName('item')
+    // console.log(divList);
+    // for (let i = 0; i < divList.length; i++) {
+    //     divList[i].onclick = function () {
+    //         divList[i].style.backgroundColor = 'pink'
+    //     }
+    // }
+
+
+    // let divList = document.getElementsByClassName('item')
+    // console.log(divList);
+    // for (let i = 0; i < divList.length; i++) {
+    //     divList[i].onclick = function () {
+    //         divList[i].style.backgroundColor = 'pink'
+    //     }
+    // }
+
+
+
+    let divList = document.getElementsByClassName('item')
+    console.log(divList);
+    for (let i = 0; i < divList.length; i++) {
+        divList[i].onclick = function () {
+            divList[i].style.backgroundColor = 'pink'
+        }
+    }
+</script>
+
+</html>

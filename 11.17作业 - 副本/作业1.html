@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #ad {
+            width: 200px;
+            height: 200px;
+            border: 1px solid #000;
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="ad"></div>
+</body>
+<script>
+    // 箭头函数
+    // function getName(){
+    //     console.log(this.name);
+    // }
+    // let getName2=()=>{
+    //     console.log(this.name);
+    // }
+    // window.name='古'
+    // const school={
+    //     name:'ATGUIGU'
+    // }
+    // getName()
+    // getName2()
+    // getName.call(school)
+    // getName2.call(school)
+
+
+    // let Person =(name,age)=>{
+    //     this.name=name;
+    //     this.age=age
+    // }
+    // let me =new Person('xiao',30);
+    // console.log(mee);
+    // let fn=()=>{
+    //     console.log(arruments);
+    // }
+    // fn(1,2,3)
+
+    // let add=n=>{
+    //     return n+n
+    // }
+    // console.log(add(9));
+
+    // ()=>{}
+    // let ped=n=>{
+    //     return n*n
+    // }
+    // let pow =n=>n*n;
+    // console.log(pow(8));
+
+
+    // 点击div 2s后变粉色
+    // let ad = document.getElementById('ad')
+    // ad.addEventListener("click", function () {
+    //     setTimeout(() => {
+    //         this.style.background = "pink"
+    //     }, 2000)
+    // })
+
+    
+    // function getName(){
+    //     console.log(this.name);
+    // }
+    // let getName2=()=>{
+    //     console.log(this.name);
+    // }
+    // window.name='古'
+    // const school={
+    //     name:'ATGUIGU'
+    // }
+    // getName()
+    // getName2()
+    // getName.call(school)
+    // getName2.call(school)
+
+
+    // let Person =(name,age)=>{
+    //     this.name=name;
+    //     this.age=age
+    // }
+    // let me =new Person('xiao',30);
+    // console.log(mee);
+    // let fn=()=>{
+    //     console.log(arruments);
+    // }
+    // fn(1,2,3)
+
+    // let add=n=>{
+    //     return n+n
+    // }
+    // console.log(add(9));
+
+    // ()=>{}
+    // let ped=n=>{
+    //     return n*n
+    // }
+    // let pow =n=>n*n;
+    // console.log(pow(8));
+
+
+    // 点击div 2s后变粉色
+    // let ad = document.getElementById('ad')
+    // ad.addEventListener("click", function () {
+    //     setTimeout(() => {
+    //         this.style.background = "pink"
+    //     }, 2000)
+    // })
+
+
+    // function getName(){
+    //     console.log(this.name);
+    // }
+    // let getName2=()=>{
+    //     console.log(this.name);
+    // }
+    // window.name='古'
+    // const school={
+    //     name:'ATGUIGU'
+    // }
+    // getName()
+    // getName2()
+    // getName.call(school)
+    // getName2.call(school)
+
+
+    let Person =(name,age)=>{
+        this.name=name;
+        this.age=age
+    }
+    let me =new Person('xiao',30);
+    console.log(mee);
+    let fn=()=>{
+        console.log(arruments);
+    }
+    fn(1,2,3)
+
+    let add=n=>{
+        return n+n
+    }
+    console.log(add(9));
+
+    ()=>{}
+    let ped=n=>{
+        return n*n
+    }
+    let pow =n=>n*n;
+    console.log(pow(8));
+
+
+    // 点击div 2s后变粉色
+    let ad = document.getElementById('ad')
+    ad.addEventListener("click", function () {
+        setTimeout(() => {
+            this.style.background = "pink"
+        }, 2000)
+    })
+</script>
+
+</html>
