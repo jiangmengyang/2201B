@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // 实例化Promise 对象
+    // const p = new Promise(function (resolve, reject) {
+
+    //     setTimeout(function () {
+    //         // let data='我要休息了'
+    //         // reject(data)
+    //         let data='我还不能休息，我要挣钱'
+    //         reject(data)
+    //     })
+    // })
+    // p.then(res=>{
+    //     console.log(res,'成功回调');
+    // }).catch(err=>{
+    //     console.log(err,'失败回调');
+    // })
+    // 简写方式
+    // p.then(
+    //     //成功的回调
+    //     ()=>{
+
+    //     },
+    //     // 已失败的回调
+    //     ()=>{
+
+    //     }
+    // )
+
+    // 实例化Promise 对象
+    // const p = new Promise(function (resolve, reject) {
+
+    //     setTimeout(function () {
+    //         // let data='我要休息了'
+    //         // reject(data)
+    //         let data='我还不能休息，我要挣钱'
+    //         reject(data)
+    //     })
+    // })
+    // p.then(res=>{
+    //     console.log(res,'成功回调');
+    // }).catch(err=>{
+    //     console.log(err,'失败回调');
+    // })
+    // 简写方式
+    // p.then(
+    //     //成功的回调
+    //     ()=>{
+
+    //     },
+    //     // 已失败的回调
+    //     ()=>{
+
+    //     }
+    // )
+
+    // 实例化Promise 对象
+    const p = new Promise(function (resolve, reject) {
+
+        setTimeout(function () {
+            // let data='我要休息了'
+            // reject(data)
+            let data='我还不能休息，我要挣钱'
+            reject(data)
+        })
+    })
+    p.then(res=>{
+        console.log(res,'成功回调');
+    }).catch(err=>{
+        console.log(err,'失败回调');
+    })
+    // 简写方式
+    // p.then(
+    //     //成功的回调
+    //     ()=>{
+
+    //     },
+    //     // 已失败的回调
+    //     ()=>{
+
+    //     }
+    // )
+</script>
+</html>
