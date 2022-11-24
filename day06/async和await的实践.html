@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // const getPeachs=`桃花源记`;
+    // const getTroops=`出师表`;
+    // const getAgent=`岳阳楼记`;
+    // function getPeachs(){
+    //     return new Promise(function(resolve,reject){
+    //         setTimeout(()=>{
+    //             resolve(getPeachs)
+    //         })
+    //     })
+    // }
+    // async function getTroops(){
+    //     console.log('执行到这个地方李');
+    //     let result=await getPeachs();
+    //     console.log(result);
+    // }
+    // getTroops()
+
+    // const getPeachs=`桃花源记`;
+    // const getTroops=`出师表`;
+    // const getAgent=`岳阳楼记`;
+    // function getPeachs(){
+    //     return new Promise(function(resolve,reject){
+    //         setTimeout(()=>{
+    //             resolve(getPeachs)
+    //         })
+    //     })
+    // }
+    // async function getTroops(){
+    //     console.log('执行到这个地方李');
+    //     let result=await getPeachs();
+    //     console.log(result);
+    // }
+    // getTroops()
+
+    const getPeachs=`桃花源记`;
+    const getTroops=`出师表`;
+    const getAgent=`岳阳楼记`;
+    function getPeachs(){
+        return new Promise(function(resolve,reject){
+            setTimeout(()=>{
+                resolve(getPeachs)
+            })
+        })
+    }
+    async function getTroops(){
+        console.log('执行到这个地方李');
+        let result=await getPeachs();
+        console.log(result);
+    }
+    getTroops()
+</script>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // function getPeach(){
+    //     return new Promise(function(resolve,reject){
+    //         setTimeout(()=>{
+    //             resolve(getPeach)
+    //         })
+    //     })
+    // }
+    // function getTroop(){
+    //     return new Promise(function(resolve,reject){
+    //         setTimeout(()=>{
+    //             resolve(getTroop)
+    //         })
+    //     })
+    // }
+    // function getAgents(){
+    //     return new Promise(function(resolve,reject){
+    //         setTimeout(()=>{
+    //             resolve(getAgents)
+    //         })
+    //     })
+    // }
+    // Promise.all([getPeach(),getTroop(),getAgents()]).then((re)=>{
+    //     console.log(res);
+    // })
+
+
+
+    // function getPeach(){
+    //     return new Promise(function(resolve,reject){
+    //         setTimeout(()=>{
+    //             resolve(getPeach)
+    //         })
+    //     })
+    // }
+    // function getTroop(){
+    //     return new Promise(function(resolve,reject){
+    //         setTimeout(()=>{
+    //             resolve(getTroop)
+    //         })
+    //     })
+    // }
+    // function getAgents(){
+    //     return new Promise(function(resolve,reject){
+    //         setTimeout(()=>{
+    //             resolve(getAgents)
+    //         })
+    //     })
+    // }
+    // Promise.all([getPeach(),getTroop(),getAgents()]).then((re)=>{
+    //     console.log(res);
+    // })
+
+
+    function getPeach(){
+        return new Promise(function(resolve,reject){
+            setTimeout(()=>{
+                resolve(getPeach)
+            })
+        })
+    }
+    function getTroop(){
+        return new Promise(function(resolve,reject){
+            setTimeout(()=>{
+                resolve(getTroop)
+            })
+        })
+    }
+    function getAgents(){
+        return new Promise(function(resolve,reject){
+            setTimeout(()=>{
+                resolve(getAgents)
+            })
+        })
+    }
+    Promise.all([getPeach(),getTroop(),getAgents()]).then((re)=>{
+        console.log(res);
+    })
+</script>
+</html>
