@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>样式绑定</title>
+    <script type="text/javascript" src="../../js/vue.js"></script>
+</head>
+
+<body>
+    <div id="root">
+       <div class="basic" :class="mood" @click="change">{{name}}</div>
+        <div class="basic" :class="classArr">{{name}}</div>
+        <div class="basic" :class="classObj">{{name}}</div>
+        <div class="basic" :class="[classed?'classObj1':'classObj','classObj2']">{{name}}</div>
+        <div class="basic" :style="classObj4">{{name}}</div>
+        <div class="basic" :style="classObj5">{{name}}</div>
+    </div>
+    <script>
+        // Vue.config.productionTip = false
+        // new Vue({
+        //     el: '#root',
+        //     data() {
+        //         return {
+        //             name: '这是基础样式',
+        //             mood:'normal',
+        //             classArr:['classArr1',"classArr2"],
+        //             classed:true,
+        //             classObj:{
+        //                 classObj1:true,
+        //                 classObj2:false
+        //             },
+        //             classObj4:{
+        //                 color:'red',
+        //                 backgroundColor: 'blue'
+        //             },
+        //             classObj5:[
+        //                 { color: 'bisque',
+        //                 fontSize: '18px'},
+        //                 {
+        //                     backgroundColor: 'palevioletred'
+        //                 }
+        //             ]
+                   
+                    
+        //         }
+        //     },
+        //     methods: {
+        //         change(){
+        //             const arr=['happy','sad','noemal']
+        //             this.mood=arr[Math.floor(Math.random()*3)]
+        //         }
+        //     },
+        // })
+
+
+        // Vue.config.productionTip = false
+        // new Vue({
+        //     el: '#root',
+        //     data() {
+        //         return {
+        //             name: '这是基础样式',
+        //             mood:'normal',
+        //             classArr:['classArr1',"classArr2"],
+        //             classed:true,
+        //             classObj:{
+        //                 classObj1:true,
+        //                 classObj2:false
+        //             },
+        //             classObj4:{
+        //                 color:'red',
+        //                 backgroundColor: 'blue'
+        //             },
+        //             classObj5:[
+        //                 { color: 'bisque',
+        //                 fontSize: '18px'},
+        //                 {
+        //                     backgroundColor: 'palevioletred'
+        //                 }
+        //             ]
+                   
+                    
+        //         }
+        //     },
+        //     methods: {
+        //         change(){
+        //             const arr=['happy','sad','noemal']
+        //             this.mood=arr[Math.floor(Math.random()*3)]
+        //         }
+        //     },
+        // })
+
+        Vue.config.productionTip = false
+        new Vue({
+            el: '#root',
+            data() {
+                return {
+                    name: '这是基础样式',
+                    mood:'normal',
+                    classArr:['classArr1',"classArr2"],
+                    classed:true,
+                    classObj:{
+                        classObj1:true,
+                        classObj2:false
+                    },
+                    classObj4:{
+                        color:'red',
+                        backgroundColor: 'blue'
+                    },
+                    classObj5:[
+                        { color: 'bisque',
+                        fontSize: '18px'},
+                        {
+                            backgroundColor: 'palevioletred'
+                        }
+                    ]
+                   
+                    
+                }
+            },
+            methods: {
+                change(){
+                    const arr=['happy','sad','noemal']
+                    this.mood=arr[Math.floor(Math.random()*3)]
+                }
+            },
+        })
+    </script>
+    <style>
+        .basic{
+            width: 200px;
+            height: 100px;
+            border: 1px solid #000;
+        }
+        .happy{
+            width: 200px;
+            height: 100px;
+            border: 1px solid aqua;
+            background-color: palevioletred;
+            background: linear-gradient(30deg,yellow,pink,orange,yellowgreen);
+        }
+        .sad{
+            width: 200px;
+            height: 100px;
+            border: 1px solid pink;
+            background-color: greenyellow;
+        }
+        .normal{
+            background-color: red;
+            border: 1px solid purple;
+        }
+        .classArr{
+            background-color: brown;
+            color: bisque;
+            font-size: 20px;
+        }
+        .classArr1{
+            background-color: cadetblue;
+            color: bisque;
+            font-size: 18px;
+        }
+        .classArr2{
+            background-color: darkcyan;
+            color: bisque;
+            font-size: 20px;
+        }
+        .classObj{
+            background-color: aquamarine;
+            font-size: 25px;
+        }
+        .classObj1{
+            background-color: yellowgreen;
+            font-size: 18px;
+        }
+        .classObj2{
+            background-color: green;
+            font-size: 20px;
+        }
+        </style>
+</body>
+
+
+</html>

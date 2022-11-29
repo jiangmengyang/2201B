@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="box">
+        <!-- 头部 -->
+        <div class="top">
+            <div class="img">
+                <img src="./note.75134fb0.svg" alt="">
+            </div>
+            <div class="title">To-Do List</div>
+        </div>
+        <!-- 头部 -->
+        <!-- 表单内容 -->
+        <div class="form">
+            <div class="form-title">~ Today I need to ~</div>
+            <div class="form-wrap">
+                <div class="form-input">
+                    <input type="text" class="input" placeholder="Add new todo...">
+                </div>
+                <button type="submit" class="btn">
+                    <span class="add">Submit</span>
+                </button>
+            </div>
+        </div>
+        <!-- 表单内容 -->
+        <!-- todo -->
+        <ul class="todo">
+            <!-- <li class="todo-item">
+                <div class="lis">
+                    <div class="liss">
+                        <input type="checkbox" class="check-btn" name="" id="">
+                    <p class="comtent">add</p>
+                    </div>
+                    
+                    <p class="del">×</p>
+
+                </div>
+            </li> -->
+        </ul>
+        <!-- todo -->
+        <!-- 切换状态 -->
+        <footer class="footers">
+            <div class="left">
+                <span class="items-left"><span class="Alllength">0</span> items left</span>
+            </div>
+            <div class="right">
+                <div class="all">All</div>
+                <div class="active">Active</div>
+                <div class="completed">Completed</div>
+            </div>
+            <div class="clear">Clear Completed</div>
+        </footer>
+        <!-- 切换状态 -->
+        <!-- 底部标题 -->
+        <div class="bottom">
+            <div class="congrat"><img src="./任务.png" alt=""> Congrat,you have no more tasks to do</div>
+        </div>
+        <!-- 底部标题 -->
+    </div>
+</body>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif,Yanone Kaffeesatz, sans-serif;
+    }
+
+    body {
+        background-image: linear-gradient(to right, #ffafbc, #ffc3a0);
+    }
+
+    .box {
+        padding: 20px;
+        text-align: center;
+        width: 360px;
+        margin: 150px auto;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        background: #f2f2f2;
+    }
+
+    .top {
+        width: 100%;
+        height: 88px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .top img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .top .title {
+        width: 98px;
+        height: 45px;
+        transform: rotate(3deg);
+        font-size: 18px;
+        line-height: 45px;
+        border-radius: 20% 5% 20% 5%/5% 20% 25% 20%;
+        color: #fff;
+        background: #fe7345;
+        margin-left: 20px;
+    }
+
+    .form {
+        width: 100%;
+        height: 82px;
+        margin-top: 25px;
+    }
+
+    .form .form-title {
+        font-weight: 600;
+        font-size: 18px;
+        color: #494a4b;
+        margin-bottom: 18px;
+    }
+
+    .form .form-wrap {
+        display: flex;
+        justify-content: center;
+    }
+
+    .form-wrap .form-input {
+        display: inline-block;
+        flex-grow: .65;
+        margin-right: 15px;
+    }
+
+    .form-wrap .input {
+        border: none;
+        width: 100%;
+        border-bottom: 3px dashed #fe7345;
+        padding: 5px 0 3px;
+        font-size: 18px;
+        background: transparent;
+        outline: none;
+    }
+
+    .form-wrap .btn {
+        position: relative;
+        transform: rotate(4deg);
+        border-radius: 6px;
+        transition: transform .25s cubic-bezier(.175, .885, .32, 1.275);
+    }
+
+    .btn {
+        position: relative;
+        transform: rotate(4deg);
+        border-radius: 6px;
+        transition: transform 0.25s;
+        box-sizing: border-box;
+        outline: none;
+        border: none;
+
+    }
+
+    .add {
+        position: relative;
+        display: block;
+        font-size: 16.5px;
+        padding: 0.34em 0.84em;
+        border: 2px solid #494a4b;
+        border-radius: inherit;
+        background-color: #fff;
+    }
+
+    .btn::before {
+        box-sizing: border-box;
+        position: absolute;
+        left: 0;
+        top: 0;
+        content: "";
+        width: 100%;
+        height: 100%;
+        transform: scaleY(1.1);
+        border: 1px solid #494a4b;
+        border-radius: inherit;
+        transform-origin: top;
+        background-image: url(data:image/png;base64,R0lGODlhBAAEAIABAAAAAAAAACH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4wLWMwNjEgNjQuMTQwOTQ5LCAyMDEwLzEyLzA3LTEwOjU3OjAxICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1LjEgV2luZG93cyIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo5NUY1OENCRDdDMDYxMUUyOTEzMEE1MEM5QzM0NDVBMyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo5NUY1OENCRTdDMDYxMUUyOTEzMEE1MEM5QzM0NDVBMyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjk1RjU4Q0JCN0MwNjExRTI5MTMwQTUwQzlDMzQ0NUEzIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjk1RjU4Q0JDN0MwNjExRTI5MTMwQTUwQzlDMzQ0NUEzIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Af/+/fz7+vn49/b19PPy8fDv7u3s6+rp6Ofm5eTj4uHg397d3Nva2djX1tXU09LR0M/OzczLysnIx8bFxMPCwcC/vr28u7q5uLe2tbSzsrGwr66trKuqqainpqWko6KhoJ+enZybmpmYl5aVlJOSkZCPjo2Mi4qJiIeGhYSDgoGAf359fHt6eXh3dnV0c3JxcG9ubWxramloZ2ZlZGNiYWBfXl1cW1pZWFdWVVRTUlFQT05NTEtKSUhHRkVEQ0JBQD8+PTw7Ojk4NzY1NDMyMTAvLi0sKyopKCcmJSQjIiEgHx4dHBsaGRgXFhUUExIREA8ODQwLCgkIBwYFBAMCAQAAIfkEAQAAAQAsAAAAAAQABAAAAgYEEpdoeQUAOw==);
+        background-color: #fe7345;
+        transition: transform 0.25s;
+    }
+
+    .btn:active {
+        animation: btn 0.6s;
+        height: 30px;
+        transform: rotate(0deg);
+        box-shadow: 0px 0px 0px #000;
+    }
+
+    .comtent {
+        margin-left: 10px;
+    }
+
+
+    .footers {
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 100px;
+        font-size: 12px;
+        white-space: nowrap;
+        display: none;
+    }
+
+    .right {
+        display: flex;
+        font-size: 12px;
+    }
+
+    .all,
+    .active,
+    .completed {
+        font-size: 12px;
+        margin: 0 5px;
+        cursor: pointer;
+        padding: 3px;
+        border-radius: 5px;
+
+    }
+
+    .clear {
+        cursor: pointer;
+    }
+
+    .bottom {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5px 0;
+        margin-top: 30px;
+        color: #a6a6a7;
+    }
+
+    .todo {
+        width: 100%;
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    .todo .todo-item {
+        width: 100%;
+        height: 40px;
+        margin: 10px auto;
+        display: flex;
+        align-items: center;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .lis {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px 10px 8px 0;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .liss{
+        display: flex;
+    }
+
+    .todo-item .check-btn {
+        margin: 15px 10px;
+        width: 20px;
+        float: left;
+        height: 20px;
+    }
+    .todo-item .del {
+        float: left;
+        margin-left: 280px;
+        text-align: center;
+        line-height: 50px;
+        width: 30px;
+        height: 50px;
+        font-size: 30px;
+    }
+
+    .close-btn {
+        margin: 0 10px 0 auto;
+        padding: 0 8px;
+        outline: none;
+        border: none;
+    }
+
+    .congrat {
+        width: 360px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        font-size: 14px;
+        color: #ccc;
+    }
+
+    .congrat img {
+        width: 15px;
+        height: 18px;
+        margin: 5px 0 0 0;
+    }
+</style>
+<script src="./todolist.js"></script>
+
+</html>
